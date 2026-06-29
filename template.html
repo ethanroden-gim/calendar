@@ -84,6 +84,7 @@
       padding: 0.5rem 0.6rem;
       border: 2px solid #2e2e2e;
       min-height: 0;
+      min-width: 0;                /* let cells shrink to their column so text can wrap */
       display: flex;
       flex-direction: column;
       overflow: hidden;            /* clip rare busy-day overflow rather than break fill-height */
@@ -104,6 +105,7 @@
       border-radius: 3px;
       padding: 3px 7px;
       margin-bottom: 4px;
+      overflow-wrap: anywhere;     /* wrap long words instead of clipping them */
     }
     .chip.maintenance { background: #243a16; border-left: 4px solid var(--gim-green); }
     .chip.holiday { background: #3a3326; border-left: 4px solid var(--gim-tan); }
